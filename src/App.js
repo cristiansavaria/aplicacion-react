@@ -1,23 +1,29 @@
-import logo from './logo.svg';
+
+import axios, { Axios } from 'axios';
+
+
 import './App.css';
 
 function App() {
+ 
+  const options = {
+    method: 'GET',
+    url: 'https://digimon-api.vercel.app/api/digimon',
+  };
+ const x = axios.request(options).then((response) => {
+   const data = response.data
+   console.log(data);
+  
+  }).catch((error) => {
+   
+  });
+axios.get(url,params)
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+     <h1>Hola Mundo</h1>
+     <li></li>
+     <div className='api'></div>
     </div>
   );
 }
